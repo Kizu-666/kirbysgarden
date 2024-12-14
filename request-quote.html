@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kirby's Garden | Landscaping Services Philippines</title>
+        <link rel="icon" href="Logos/kgLogo1.png">
+        <meta name="description" content="Kirby's Garden offers professional landscaping services to transform your outdoor spaces in the Philippines. Contact us for creative solutions and exceptional quality.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="requestStyle.css">
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "LandscapingBusiness",
+              "name": "Kirby's Garden",
+              "url": "https://www.kirbysgarden.com",
+              "logo": "https://www.kirbysgarden.com/Logos/kgLogo1.png",
+              "description": "Professional landscaping services for homes and businesses in Luzon, Philippines.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Poinsettia St. Corner Violeta Avenue, Violeta Village",
+                "addressLocality": "Sta. Cruz Guiguinto",
+                "addressRegion": "Bulacan",
+                "postalCode": "3015",
+                "addressCountry": "PH"
+              },
+              "telephone": "+639267927286",
+              "email": "bernard.malit@yahoo.com.ph",
+              "openingHours": "Mo-Su 06:00-22:00",
+              "sameAs": [
+                "https://www.facebook.com/kirbysgarden25"
+              ]
+            }
+            </script>
+    </head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <a href="index.html"><img class="logo" src="Logos/kgLogoTop2.png" alt="Kirby's Garden Landscaping Logo"></a>
+
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landscaping-services.html">Services</a></li>
+                <li><a href="featured-projects.html">Featured Projects</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="request-quote.html">Request A Quote</a></li>
+            </ul>
+        </nav>
+
+        <a class="cta" href="#" onclick="openModal()"><button>Contact</button></a>
+    </header>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Contact Information</h2>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/address.png" alt="Address Icon" />
+                <p><strong>Address :</strong> Poinsettia St. Corner Violeta Avenue, Violeta Village, Sta. Cruz Guiguinto
+                    Bulacan</p>
+            </div>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/whatsapp.png" alt="Phone Icon" />
+                <p><strong>What's App :</strong> 0926-692-7286 / 0923-738-4860</p>
+            </div>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/facebook.png" alt="Facebook Icon" />
+                <p><strong>Facebook :</strong> <a href="https://www.facebook.com/kirbysgarden25"
+                        target="_blank">facebook.com/kirbysgarden25</a></p>
+            </div>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/yahoo.png" alt="Yahoo Icon" />
+                <p><strong>Email :</strong> <a>bernard.malit@yahoo.com.ph</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="request-quote">
+        <div class="container">
+            <h1>Request A Quote</h1>
+            <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="383b6c47-29d7-479f-8b7d-e69a9d20013d">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        title="Please enter a valid email address (e.g., someone@example.com)">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"
+                        pattern="^09\d{9}$" title="Phone number should be 11 digits long and start with 09." />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Full Address:</label>
+                    <input type="text" id="address" name="address" required placeholder="Enter your full address">
+                </div>
+
+                <div class="form-group">
+                    <label for="services">Services Needed:</label>
+                    <textarea id="services" name="services" rows="4" required
+                        placeholder="Describe the services you need..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Estimated Budget (Optional):</label>
+                    <input type="text" id="budget" name="budget" placeholder="Enter your estimated budget (optional)">
+                </div>
+
+                <button type="submit">Request Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-modal-content">
+            <div class="thank-you-logo">
+                <img src="Logos/kgLogo2.png" alt="Kirby's Garden Landscaping Logo" />
+            </div>
+            <h2>Thank You for Requesting a Service!</h2>
+            <p>Your request has been successfully submitted. Please wait and we will contact you as soon as possible.
+            </p>
+            <button onclick="closeThankYouModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('quoteForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this); 
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showThankYouModal();
+                        
+                    } else {
+                        alert('There was an error submitting your request. Please try again later.');
+                    }
+                })
+                .catch(error => {
+                    alert('There was an error: ' + error.message);
+                    console.error(error);
+                });
+        });
+        function showThankYouModal() {
+            const modal = document.getElementById('thankYouModal');
+            modal.style.display = 'flex';
+        }
+        function closeThankYouModal() {
+            const modal = document.getElementById('thankYouModal');
+            modal.style.display = 'none'
+            document.getElementById('quoteForm').reset();
+        }
+
+        function openModal() {
+            document.getElementById("contactModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.querySelector(".nav_links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (event) => {
+            const isClickInsideHamburger = hamburger.contains(event.target);
+            const isClickInsideNavLinks = navLinks.contains(event.target);
+
+            if (!isClickInsideHamburger && !isClickInsideNavLinks) {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("active");
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kirby's Garden. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

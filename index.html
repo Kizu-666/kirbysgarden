@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kirby's Garden | Landscaping Services Philippines</title>
+    <link rel="icon" href="Logos/kgLogo1.png">
+    <meta name="description" content="Kirby's Garden offers professional landscaping services to transform your outdoor spaces in the Philippines. Contact us for creative solutions and exceptional quality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexStyle.css">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LandscapingBusiness",
+          "name": "Kirby's Garden",
+          "url": "https://www.kirbysgarden.com",
+          "logo": "https://www.kirbysgarden.com/Logos/kgLogo1.png",
+          "description": "Professional landscaping services for homes and businesses in Luzon, Philippines.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Poinsettia St. Corner Violeta Avenue, Violeta Village",
+            "addressLocality": "Sta. Cruz Guiguinto",
+            "addressRegion": "Bulacan",
+            "postalCode": "3015",
+            "addressCountry": "PH"
+          },
+          "telephone": "+639267927286",
+          "email": "bernard.malit@yahoo.com.ph",
+          "openingHours": "Mo-Su 06:00-22:00",
+          "sameAs": [
+            "https://www.facebook.com/kirbysgarden25"
+          ]
+        }
+        </script>
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <a href="index.html"><img class="logo" src="Logos/kgLogoTop2.png" alt="Kirby's Garden Landscaping Logo"></a>
+
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landscaping-services.html">Services</a></li>
+                <li><a href="featured-projects.html">Featured Projects</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="request-quote.html">Request A Quote</a></li>
+            </ul>
+        </nav>
+
+        <a class="cta" href="#" onclick="openModal()"><button>Contact</button></a>
+    </header>
+
+    <div class="content">
+        <img class="logoBody" src="Logos/kgLogo2.png" alt="Kirby's Garden Landscaping Logo">
+        <h1>Welcome to <br>KIRBY'S GARDEN</h1>
+        <p class="par">"Think creative landscaping. Think us, with our landscaping. There’s always hope and scope.”</p>
+        <a class="cn" href="landscaping-services.html"><button>Explore</button></a>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Contact Information</h2>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/address.png" alt="Address Icon" />
+                <p><strong>Address :</strong> Poinsettia St. Corner Violeta Avenue, Violeta Village, Sta. Cruz Guiguinto
+                    Bulacan</p>
+            </div>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/whatsapp.png" alt="Phone Icon" />
+                <p><strong>What's App :</strong> 0926-692-7286 / 0923-738-4860</p>
+            </div>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/facebook.png" alt="Facebook Icon" />
+                <p><strong>Facebook :</strong> <a href="https://www.facebook.com/kirbysgarden25"
+                        target="_blank">facebook.com/kirbysgarden25</a></p>
+            </div>
+            <div class="contact-item">
+                <img class="contact-icon" src="Logos/yahoo.png" alt="Yahoo Icon" />
+                <p><strong>Email :</strong> <a>bernard.malit@yahoo.com.ph</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("contactModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.querySelector(".nav_links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
+        
+        document.addEventListener("click", (event) => {
+            const isClickInsideHamburger = hamburger.contains(event.target);
+            const isClickInsideNavLinks = navLinks.contains(event.target);
+
+            if (!isClickInsideHamburger && !isClickInsideNavLinks) {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("active");
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Kirby's Garden. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
