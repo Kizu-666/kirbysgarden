@@ -15,6 +15,20 @@
         
         gtag('config', 'G-B0L982HFCE');
     </script>
+    <script>
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion_event_request_quote', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+        });
+        return false;
+      }
+    </script>
         <link rel="stylesheet" href="requestStyle.css">
         <script type="application/ld+json">
             {
