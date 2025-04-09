@@ -64,6 +64,30 @@ const projects = [
         ],
         title: "Silang Cavite",
         description: "Renovate Water Feature & Coi Pond At Silang Cavite"
+    },
+    {
+        images: [
+            "Icon/1.jpg", 
+            "Icon/2.jpg",
+            "Icon/3.jpg",
+            "Icon/4.jpg",
+            "Icon/5.jpg",
+            "Icon/6.jpg"
+        ],
+        title: "ICON Residences",
+        description: "Project At BGC Taguig"
+    },
+    {
+        images: [
+            "MGE/1.jpg", 
+            "MGE/2.jpg",
+            "MGE/3.jpg",
+            "MGE/4.jpg",
+            "MGE/5.jpg",
+            "MGE/6.jpg"
+        ],
+        title: "Madera Grove Estate",
+        description: "Project At Malolos Bulacan"
     }
 ];
 
